@@ -14,18 +14,24 @@ func BubbleSort(s []int) []int {
 			}
 		}
 	}
-
 	return s
 }
 
 func main() {
 	rand.Seed(time.Now().Unix())
 
-	const N = 10
+	const N = 1000
 	s := make([]int, N)
 	for i := 0; i < N; i++ {
 		s[i] = rand.Intn(N)
 	}
 	fmt.Println(s)
+
+	start := time.Now()
+
 	fmt.Println(BubbleSort(s))
+
+	end := time.Now()
+
+	fmt.Printf("%fs\n", (end.Sub(start)).Seconds())
 }
