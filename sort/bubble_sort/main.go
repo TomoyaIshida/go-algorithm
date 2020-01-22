@@ -20,7 +20,7 @@ func BubbleSort(s []int) []int {
 func main() {
 	rand.Seed(time.Now().Unix())
 
-	const N = 1000
+	const N = 10000
 	s := make([]int, N)
 	for i := 0; i < N; i++ {
 		s[i] = rand.Intn(N)
